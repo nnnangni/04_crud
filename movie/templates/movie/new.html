@@ -1,0 +1,52 @@
+{% extends "movie/base.html" %}
+
+{% block bb %}
+
+    <form action="/movies/create/", method=post>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputMVname1">영화명</label>
+          <input type="text" class="form-control" id="inputMVname1" placeholder="TITLE" name="title">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputMVname2">영화명(영문)</label>
+          <input type="text" class="form-control" id="inputMVname2" placeholder="TITLE(ENG)" name="title_en">
+        </div>    
+        <div class="form-group col-md-6">
+          <label for="inputNUM">누적관객수</label>
+          <input type="number" class="form-control" id="inputNUM" name="audience">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputDate">개봉일</label>
+        <input type="date" class="form-control" id="inputDate" name="open_date">
+      </div>
+      <div class="form-group">
+        <label for="inputGenre">장르</label>
+        <input type="text" class="form-control" id="inputGenre" name="genre">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputGrade">관람등급</label>
+          <input type="text" class="form-control" id="inputGrade" name="watch_grade">
+        </div>
+            <div class="form-group col-md-6">
+          <label for="inputScore">평점</label>
+          <input type="number" class="form-control" id="inputScore" name="score">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputIMG">포스터이미지 URL</label>
+          <input type="text" class="form-control" id="inputIMG" name="poster_url">
+        </div>
+        <div class="form-group">
+            <label for="Description">영화소개</label>
+        <textarea class="form-control" id="Description" rows="3" name="description"></textarea>
+      </div>
+      </div>
+    
+      <button type="submit" class="btn btn-primary" value="Submit">SAVE</button>
+    </form>
+
+{% endblock %}
+
+

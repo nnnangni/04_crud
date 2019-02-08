@@ -1,0 +1,11 @@
+{% extends "movie/base.html" %}
+{% block bb %}
+    <h3>영화목록<span class="badge badge-secondary">New</span></h3>
+    <hr>
+    {% for movie in movies %}
+        <a href="/movies/{{movie.id}}">{{movie.title}}</a>
+        <p>{{movie.score}}</p>
+    {% endfor %}
+{% endblock %}
+
+
